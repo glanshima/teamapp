@@ -527,7 +527,7 @@ html {
     display: flex;
     width: 100%;
     background-color: #131520;
-    /* height: 100%; */
+    height: 0%;
     position: absolute;
     bottom: 0;
     opacity: 0;
@@ -543,11 +543,11 @@ html {
 }
 
 .gallery-img:hover::after {
-    opacity: 0.8;
+    opacity: 0.970;
     cursor: pointer;
-    animation: height 1s;
+    animation: height 1s, opacity .5s;
     height: 100%;
-    transition: height var(--transition-1);
+    transition: all var(--transition-1);
 }
 
 @keyframes height {
@@ -556,6 +556,18 @@ html {
     }
     100% {
         height: 100%;
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0%;
+    }
+    70% {
+        opacity: .580;
+    }
+    100% {
+        opacity: .980;
     }
 }
 
