@@ -46,7 +46,7 @@ contactForm.addEventListener('click', (e) => {
         contactUs.style.cssText = "right: 0";
         staffLogin.style.cssText = "right: -100";
         closeForm.style.cssText = "visibility: visible";
-        serviceContainer.style.cssText = "width: 100%";
+        serviceContainer.style.cssText = "width: 50%; translate: -50%;";
         serviceContainer.classList.add('opened-forms')
         flashHeroBox.classList.remove('login-clicked')
         flashHeroBox.style.cssText = "visibility: visible";
@@ -60,7 +60,7 @@ contactForm.addEventListener('click', (e) => {
         staffLogin.style.cssText = "right: 0";
         contactUs.style.cssText = "right: -100";
         closeForm.style.cssText = "visibility: visible";
-        serviceContainer.style.cssText = "width: 100%";
+        serviceContainer.style.cssText = "width: 50%; translate: -50%;";
         serviceContainer.classList.add('opened-forms')
         flashHeroBox.classList.add('login-clicked');
         flashHeroBox.style.cssText = "height: 12rem; visibility: visible";
@@ -72,7 +72,7 @@ contactForm.addEventListener('click', (e) => {
         staffLogin.style.cssText = "right: -100";
         contactUs.style.cssText = "right: -100";
         closeForm.style.cssText = "visibility: hidden";
-        serviceContainer.style.cssText = "width: 50wv";
+        serviceContainer.style.cssText = "width: 90%";
         serviceContainer.classList.remove('opened-forms')
         flashHeroBox.classList.remove('login-clicked')
         serviceDescription.style.cssText = "display: flex";
