@@ -125,3 +125,33 @@ setInterval(() => {
 
     siteTitle.classList.toggle("glow")
 }, 5000)
+
+/* Glide  library */
+new Glide('.glide').mount()
+
+var glide = new Glide('#intro', {
+    type: 'carousel',
+    perView: 4,
+    focusAt: 'center',
+    breakpoints: {
+        800: {
+            perView: 2
+        },
+        480: {
+            perView: 1
+        }
+    }
+})
+
+glide.mount()
+
+
+const animateShapeOut = () => {
+    anime({
+        targets: ('.gallery - img::after'),
+        duration: .5,
+        delay: 150,
+        easing: easing,
+
+    });
+}

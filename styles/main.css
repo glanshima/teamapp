@@ -489,20 +489,37 @@ html {
 .about-us {
     display: flex;
     gap: .550rem;
-    /* grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: auto;
-    grid-template-areas: 'img1 img2 ''img3 img5' 'img4 img5'; */
     padding: 0.4rem;
-    justify-content: center;
     background-color: #fff;
     border-radius: .5rem;
     width: 100%;
     height: 100%;
+    overflow: scroll;
+}
+
+.service-container.opened-forms .about-us {
+    flex-direction: column;
 }
 
 .service-container.opened-forms .gallery-img {
-    border: 1px solid red;
     height: 50%;
+}
+
+.glide {
+    display: flex;
+    width: 100%;
+    height: 90%;
+}
+
+.glide__track {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.glide__slides {
+    display: flex;
+    width: 100%;
 }
 
 
@@ -514,23 +531,22 @@ html {
 
 .gallery-img {
     width: 100%;
-    height: 90%;
+    height: 100%;
     display: flex;
     justify-content: center;
     position: relative;
     transition: var(--transition-1);
-    padding: 3% 0;
+    padding: .550rem 0;
 }
 
 .gallery-img::after {
-    content: 'Explore';
+    content: attr(data-title);
     display: flex;
     width: 100%;
     background-color: #131520;
-    height: 0%;
+    height: 100%;
     position: absolute;
     bottom: 0;
-    opacity: 0;
     transition: var(--transition-1);
     color: #f1f1f1;
     place-items: center;
@@ -540,22 +556,21 @@ html {
     letter-spacing: 2px;
     font-style: italic;
     border-radius: .5rem;
+    overflow: hidden;
+    animation: transform 1s, opacity .5s;
+    opacity: .5;
 }
 
 .gallery-img:hover::after {
-    opacity: 0.970;
-    cursor: pointer;
-    animation: height 1s, opacity .5s;
-    height: 100%;
-    transition: all var(--transition-1);
+    scale: 90% 70%;
 }
 
-@keyframes height {
+@keyframes transform {
     0% {
-        height: 0%;
+        transform: scale(-.5);
     }
     100% {
-        height: 100%;
+        transform: scale(-1);
     }
 }
 
@@ -563,7 +578,7 @@ html {
     0% {
         opacity: 0%;
     }
-    70% {
+    90% {
         opacity: .580;
     }
     100% {
@@ -577,32 +592,27 @@ html {
 
 .img-1 {
     grid-area: img1;
-    display: block;
 }
 
 .img-2 {
     grid-area: img2;
-    display: none;
 }
 
 .img-3 {
     grid-area: img3;
-    display: none;
 }
 
 .img-4 {
     grid-area: img4;
-    display: none;
 }
 
 .img-5 {
     grid-area: img5;
-    display: none;
 }
 
 .img-6 {
-    grid-area: img5;
     display: none;
+    grid-area: img5;
 }
 
 

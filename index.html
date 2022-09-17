@@ -9,8 +9,12 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- glide styles -->
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
     <script src="js/mainscript.js" defer></script>
     <script src="http://localhost/commonassets/js/animejs/lib/anime.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 </head>
 
 <body>
@@ -226,25 +230,62 @@
                 </div>
                 <div class="service-container">
                     <div class="about-us ">
-                        <div class="gallery-img img-1">
-                            <img src="images/course1.jpg" alt="Course 1" class="course-1">
-                        </div>
-                        <div class="gallery-img img-2">
-                            <img src="images/course2.jpg" alt="Course 2" class="course-2">
-                        </div>
-                        <div class="gallery-img img-3">
-                            <img src="images/course3.jpg" alt="Course 3" class="course-3">
-                        </div>
-                        <div class="gallery-img img-4">
-                            <img src="images/superb portfolio.png" alt="" class="portfolio">
-                        </div>
-                        <div class="gallery-img img-5">
-                            <img src="images/img5.jpg" alt="Course 5" class="course-5">
-                        </div>
-                        <div class="gallery-img img-6">
-                            <img src="images/img7.jpg" alt="Course 7" class="course-7">
-                        </div>
 
+                        <div class="glide">
+                            <div class="glide__track" data-glide-el="track">
+                                <ul class="glide__slides">
+                                    <li class="glide__slide">
+                                        <div class="gallery-img img-1" data-title="Explore">
+                                            <img src="images/course1.jpg" alt="Course 1" class="course-1">
+                                        </div>
+                                    </li>
+                                    <li class="glide__slide">
+                                        <div class="gallery-img img-2">
+                                            <img src="images/course2.jpg" alt="Course 2" class="course-2">
+                                        </div>
+                                    </li>
+                                    <li class="glide__slide">
+                                        <div class="gallery-img img-3">
+                                            <img src="images/course3.jpg" alt="Course 3" class="course-3">
+                                        </div>
+                                    </li>
+                                    <li class="glide__slide">
+                                        <div class="gallery-img img-4">
+                                            <img src="images/superb portfolio.png" alt="" class="portfolio">
+                                        </div>
+                                    </li>
+                                    <li class="glide__slide">
+                                        <div class="gallery-img img-5">
+                                            <img src="images/course5.jpg" alt="Course 5" class="course-5">
+                                        </div>
+                                    </li>
+
+
+
+                                </ul>
+                            </div>
+                        </div>
+                        <!--  <div data-glide-el="controls">
+                            <button data-glide-dir="<<">Start</button>
+                            <button data-glide-dir=">>">End</button>
+                        </div>
+                        <div class="glide">
+                            <div class="glide__track" data-glide-el="track">...</div>
+
+                            <div class="glide__arrows" data-glide-el="controls">
+                                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+                            </div>
+                        </div>
+                        <div class="glide">
+                            <div class="glide__track" data-glide-el="track">...</div>
+
+                            <div class="glide__bullets" data-glide-el="controls[nav]">
+                                <button class="glide__bullet" data-glide-dir="=0" aria-label="btns"></button>
+                                <button class="glide__bullet" data-glide-dir="=1" aria-label="btns"></button>
+                                <button class="glide__bullet" data-glide-dir="=2" aria-label="btns"></button>
+                            </div>
+                        </div> -->
                     </div>
                     <div class="our-products ">
                         <div class="service-description">
@@ -263,6 +304,7 @@
         </section>
         <footer class="footer "></footer>
     </main>
+    <script src="js/anime.min.js"></script>
 </body>
 
 </html>
