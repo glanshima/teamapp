@@ -10,43 +10,52 @@
     <link rel="stylesheet" href="assets/fontawesome/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="js/mainscript.js" defer></script>
-    <script src="http://localhost/commonassets/bootstrap/js/bootstrap.js"></script>
+
     <script src="http://localhost/commonassets/js/animejs/lib/anime.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
 
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
     <!-- Bootstrap End -->
     <!-- Bootstrap local -->
     <link rel="stylesheet" href="http://localhost/commonassets/bootstrap/css/bootstrap.css">
-
+    <script src="http://localhost/commonassets/bootstrap/js/bootstrap.js"></script>
 </head>
 
 <body>
     <main class="main-container">
         <header class="header mine">
-            <div class="logo">
-                <svg id="logo-38" width="78" height="32" viewBox="0 0 78 32" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M55.5 0H77.5L58.5 32H36.5L55.5 0Z" class="ccustom" fill="#FF7A00"></path> <path d="M35.5 0H51.5L32.5 32H16.5L35.5 0Z" class="ccompli1" fill="#FF9736"></path> <path d="M19.5 0H31.5L12.5 32H0.5L19.5 0Z" class="ccompli2" fill="#FFBC7D"></path> </svg>
+            <div class="logo-div">
+                <div class="logo">
+                    <svg id="logo-38" width="78" height="32" viewBox="0 0 78 32" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M55.5 0H77.5L58.5 32H36.5L55.5 0Z" class="ccustom" fill="#FF7A00"></path> <path d="M35.5 0H51.5L32.5 32H16.5L35.5 0Z" class="ccompli1" fill="#FF9736"></path> <path d="M19.5 0H31.5L12.5 32H0.5L19.5 0Z" class="ccompli2" fill="#FFBC7D"></path> </svg>
+                </div>
             </div>
-            <p class="site-title">OurCompany</p>
-            <nav class="navigation">
-                <ul class="nav-links">
-                    <li>
-                        <a href="https//api.whatsapp.com/send?phone=2348099798241" aria-label="Whatsapp icon"><i class="fa-brands fa-whatsapp" style="--clr:#00ff00" id="wa-icon"></i></a></li>
-                    <li>
-                        <a href="#" aria-label="Envelop icon"><i class="fa fa-envelope" style="--clr:#f06b0d" id="ev-icon"></i></a></li>
-                    <li>
-                        <a href="#" aria-label="Phone Icon"><i class="fa fa-phone" style="--clr:#001aff" id="ph-icon"></a></i>
-                    </li>
-                </ul>
-            </nav>
+            <div class="title-box">
+                <p class="site-title">OurCompany</p>
+            </div>
+            <div class="nav-box">
+                <nav class="navigation">
+                    <ul class="nav-links">
+                        <li>
+                            <a href="https://api.whatsapp.com/send?phone=2348099798241" aria-label="Whatsapp icon"><i class="fa-brands fa-whatsapp icon-mine" style="--clr:#00ff00" id="wa-icon"></i></a></li>
+                        <li>
+                            <a href="mailto:glanshima@gmail.com" aria-label="Envelop icon"><i class="fa fa-envelope icon-mine" style="--clr:#f06b0d" id="ev-icon"></i></a></li>
+                        <li>
+                            <a href="tel:2348099798241" aria-label="Phone Icon"><i class="fa fa-phone icon-mine" style="--clr:#001aff" id="ph-icon"></a></i>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <section class="content">
             <!--  <div class="center-box">Right Here</div> -->
@@ -54,22 +63,22 @@
             <article class="team">
                 <h2 class="our-team-hd">Meet Our Team</h2>
                 <div class="team-member tm-1">
-                    <div class="tm-img"><img src="images/tm1.jpg" width="60%" height="60%" alt=""></div>
+                    <div class="tm-img"><img src="images/tm1.jpg" width="80%" height="80%" alt=""></div>
                     <div class="tm-name-tag">
-                        <h4>Thomas James <span>Project Manager</span></h4>
+                        <h6 class="tm-name">Thomas James <span class="tm-role">Project Manager</span></h6>
                     </div>
                     <div class="socials">
                         <ul class="socials-links">
                             <li>
-                                <a href="#" aria-label="Whatsapp icon"><i class="fa-brands fa-whatsapp" style="--clr:#00ff00" id="wa-icon"></i></a></li>
+                                <a href="#" aria-label="Whatsapp icon"><i class="fa-brands fa-whatsapp i-style-mine " style="--clr:#00ff00" id="wa-icon"></i></a></li>
                             <li>
-                                <a href="#" aria-label="twitter icon"><i class="fa-brands fa-twitter" style="--clr:#1c7ef6" id="tw-icon"></i></a>
+                                <a href="#" aria-label="twitter icon"><i class="fa-brands fa-twitter i-style-mine" style="--clr:#1c7ef6" id="tw-icon"></i></a>
                             </li>
                             <li>
-                                <a href="#" aria-label="Insta Icon"><i class="fa-brands fa-instagram" style="--clr:#4d0be7" id="insta-icon"></a></i>
+                                <a href="#" aria-label="Insta Icon"><i class="fa-brands fa-instagram i-style-mine" style="--clr:#4d0be7" id="insta-icon"></a></i>
                             </li>
                             <li>
-                                <a href="mailto:example@gmail.com" aria-label="Envelop Icon"><i class="fa fa-envelope" style="--clr:#f06b0d" id="ph-icon"></a></i>
+                                <a href="mailto:example@gmail.com" aria-label="Envelop Icon"><i class="fa fa-envelope i-style-mine" style="--clr:#f06b0d" id="ph-icon"></a></i>
                             </li>
                         </ul>
                     </div>
@@ -77,21 +86,21 @@
                 <div class="team-member tm-2">
                     <div class="tm-img"><img src="images/tm2.jpg" width="80%" height="80%" alt=""></div>
                     <div class="tm-name-tag">
-                        <h4>Thompson Lucy <span>Ast. Manager</span></h4>
+                        <h6 class="tm-name">Thompson Lucy <span class="tm-role">Ast. Manager</span></h6>
                     </div>
                     <div class="socials">
                         <ul class="socials-links">
                             <li>
-                                <a href="#" aria-label="Whatsapp icon"><i class="fa-brands fa-whatsapp" style="--clr:#00ff00" id="wa-icon"></i></a>
+                                <a href="#" aria-label="Whatsapp icon"><i class="fa-brands fa-whatsapp i-style-mine" style="--clr:#00ff00" id="wa-icon"></i></a>
                             </li>
                             <li>
-                                <a href="#" aria-label="twitter icon"><i class="fa-brands fa-twitter" style="--clr:#1c7ef6" id="tw-icon"></i></a>
+                                <a href="#" aria-label="twitter icon"><i class="fa-brands fa-twitter i-style-mine" style="--clr:#1c7ef6" id="tw-icon"></i></a>
                             </li>
                             <li>
-                                <a href="#" aria-label="Insta Icon"><i class="fa-brands fa-instagram" style="--clr:#4d0be7" id="insta-icon"></a></i>
+                                <a href="#" aria-label="Insta Icon"><i class="fa-brands fa-instagram i-style-mine" style="--clr:#4d0be7" id="insta-icon"></a></i>
                             </li>
                             <li>
-                                <a href="#" aria-label="Envelop Icon"><i class="fa fa-envelope" style="--clr:#f06b0d" id="ph-icon"></a></i>
+                                <a href="#" aria-label="Envelop Icon"><i class="fa fa-envelope i-style-mine" style="--clr:#f06b0d" id="ph-icon"></a></i>
                             </li>
                         </ul>
                     </div>
@@ -99,19 +108,19 @@
                 <div class="team-member tm-3">
                     <div class="tm-img"><img src="images/tm3.jpg" width="80%" height="80%" alt=""></div>
                     <div class="tm-name-tag">
-                        <h4>Jessica Josephs <span>Lead Coordinator</span></h4>
+                        <h6 class="tm-name">Jessica Josephs <span class="tm-role">Lead Coordinator</span></h6>
                     </div>
                     <div class="socials">
                         <ul class="socials-links">
                             <li>
-                                <a href="#" aria-label="Whatsapp icon"><i class="fa-brands fa-whatsapp" style="--clr:#00ff00" id="wa-icon"></i></a></li>
+                                <a href="#" aria-label="Whatsapp icon"><i class="fa-brands fa-whatsapp i-style-mine" style="--clr:#00ff00" id="wa-icon"></i></a></li>
                             <li>
-                                <a href="#" aria-label="twitter icon"><i class="fa-brands fa-twitter" style="--clr:#1c7ef6" id="tw-icon"></i></a></li>
+                                <a href="#" aria-label="twitter icon"><i class="fa-brands fa-twitter i-style-mine" style="--clr:#1c7ef6" id="tw-icon"></i></a></li>
                             <li>
-                                <a href="#" aria-label="Insta Icon"><i class="fa-brands fa-instagram" style="--clr:#4d0be7" id="insta-icon"></a></i>
+                                <a href="#" aria-label="Insta Icon"><i class="fa-brands fa-instagram i-style-mine" style="--clr:#4d0be7" id="insta-icon"></a></i>
                             </li>
                             <li>
-                                <a href="#" aria-label="Envelop Icon"><i class="fa fa-envelope" style="--clr:#f06b0d" id="ph-icon"></a></i>
+                                <a href="#" aria-label="Envelop Icon"><i class="fa fa-envelope i-style-mine" style="--clr:#f06b0d" id="ph-icon"></a></i>
                             </li>
                         </ul>
                     </div>
@@ -119,19 +128,19 @@
                 <div class="team-member tm-4">
                     <div class="tm-img"><img src="images/tm4.jpg" width="80%" height="80%" alt=""></div>
                     <div class="tm-name-tag">
-                        <h4>Philip Wood <span>Instructor 1</span></h4>
+                        <h6 class="tm-name">Philip Wood <span class="tm-role">Instructor 1</span></h6>
                     </div>
                     <div class="socials">
                         <ul class="socials-links">
                             <li>
-                                <a href="#" aria-label="Whatsapp icon"><i class="fa-brands fa-whatsapp" style="--clr:#00ff00" id="wa-icon"></i></a></li>
+                                <a href="#" aria-label="Whatsapp icon"><i class="fa-brands fa-whatsapp i-style-mine" style="--clr:#00ff00" id="wa-icon"></i></a></li>
                             <li>
-                                <a href="#" aria-label="twitter icon"><i class="fa-brands fa-twitter" style="--clr:#1c7ef6" id="tw-icon"></i></a></li>
+                                <a href="#" aria-label="twitter icon"><i class="fa-brands fa-twitter i-style-mine" style="--clr:#1c7ef6" id="tw-icon"></i></a></li>
                             <li>
-                                <a href="#" aria-label="Insta Icon"><i class="fa-brands fa-instagram" style="--clr:#4d0be7" id="insta-icon"></a></i>
+                                <a href="#" aria-label="Insta Icon"><i class="fa-brands fa-instagram i-style-mine" style="--clr:#4d0be7" id="insta-icon"></a></i>
                             </li>
                             <li>
-                                <a href="#" aria-label="Envelop Icon"><i class="fa fa-envelope" style="--clr:#f06b0d" id="ph-icon"></a></i>
+                                <a href="#" aria-label="Envelop Icon"><i class="fa fa-envelope i-style-mine" style="--clr:#f06b0d" id="ph-icon"></a></i>
                             </li>
                         </ul>
                     </div>
@@ -139,19 +148,19 @@
                 <div class="team-member tm-5">
                     <div class="tm-img"><img src="images/tm5.jpg" width="80%" height="80%" alt=""></div>
                     <div class="tm-name-tag">
-                        <h4>Renato Jessy<span>Team Secretary</span></h4>
+                        <h6 class="tm-name">Renato Jessy<span class="tm-role">Team Secretary</span></h6>
                     </div>
                     <div class="socials">
                         <ul class="socials-links">
                             <li>
-                                <a href="#" aria-label="Whatsapp icon"><i class="fa-brands fa-whatsapp" style="--clr:#00ff00" id="wa-icon"></i></a></li>
+                                <a href="#" aria-label="Whatsapp icon"><i class="fa-brands fa-whatsapp i-style-mine" style="--clr:#00ff00" id="wa-icon"></i></a></li>
                             <li>
-                                <a href="#" aria-label="twitter icon"><i class="fa-brands fa-twitter" style="--clr:#1c7ef6" id="tw-icon"></i></a></li>
+                                <a href="#" aria-label="twitter icon"><i class="fa-brands fa-twitter i-style-mine" style="--clr:#1c7ef6" id="tw-icon"></i></a></li>
                             <li>
-                                <a href="#" aria-label="Insta Icon"><i class="fa-brands fa-instagram" style="--clr:#4d0be7" id="insta-icon"></a></i>
+                                <a href="#" aria-label="Insta Icon"><i class="fa-brands fa-instagram i-style-mine" style="--clr:#4d0be7" id="insta-icon"></a></i>
                             </li>
                             <li>
-                                <a href="#" aria-label="Envelop Icon"><i class="fa fa-envelope" style="--clr:#f06b0d" id="ph-icon"></a></i>
+                                <a href="#" aria-label="Envelop Icon"><i class="fa fa-envelope i-style-mine" style="--clr:#f06b0d" id="ph-icon"></a></i>
                             </li>
                         </ul>
                     </div>
@@ -159,19 +168,19 @@
                 <div class="team-member tm-6">
                     <div class="tm-img"><img src="images/tm6.jpg" width="80%" height="80%" alt=""></div>
                     <div class="tm-name-tag">
-                        <h4>Alpha Joe <span>Instructor</span></h4>
+                        <h6 class="tm-name">Alpha Joe <span class="tm-role">Instructor</span></h6>
                     </div>
                     <div class="socials">
                         <ul class="socials-links">
                             <li>
-                                <a href="#" aria-label="Whatsapp icon"><i class="fa-brands fa-whatsapp" style="--clr:#00ff00" id="wa-icon"></i></a></li>
+                                <a href="#" aria-label="Whatsapp icon"><i class="fa-brands fa-whatsapp i-style-mine" style="--clr:#00ff00" id="wa-icon"></i></a></li>
                             <li>
-                                <a href="#" aria-label="twitter icon"><i class="fa-brands fa-twitter" style="--clr:#1c7ef6" id="tw-icon"></i></a></li>
+                                <a href="#" aria-label="twitter icon"><i class="fa-brands fa-twitter i-style-mine" style="--clr:#1c7ef6" id="tw-icon"></i></a></li>
                             <li>
-                                <a href="#" aria-label="Insta Icon"><i class="fa-brands fa-instagram" style="--clr:#4d0be7" id="insta-icon"></a></i>
+                                <a href="#" aria-label="Insta Icon"><i class="fa-brands fa-instagram i-style-mine" style="--clr:#4d0be7" id="insta-icon"></a></i>
                             </li>
                             <li>
-                                <a href="#" aria-label="Envelop Icon"><i class="fa fa-envelope" style="--clr:#f06b0d" id="ph-icon"></a></i>
+                                <a href="#" aria-label="Envelop Icon"><i class="fa fa-envelope i-style-mine" style="--clr:#f06b0d" id="ph-icon"></a></i>
                             </li>
                         </ul>
                     </div>
@@ -185,11 +194,12 @@
                 </div>
                 <div class="contact-form-section">
                     <div class="form-selector">
-                        <button class="btn-mine btn-select-form contact-select ">Contact Us</button>
-                        <button class="btn-mine btn-select-form login-select ">Staff Login</button>
+                        <div class="form__selector__btns"> <button class="btn-mine btn-select-form contact-select">Contact Us</button>
+                            <button class="btn-mine btn-select-form login-select ">Staff Login</button>
+                        </div>
                     </div>
                     <div class="contact-form contact-section-forms ">
-                        <div class="form-hd ">
+                        <div class="form-hd">
                             <h3>Contact Us</h3>
                         </div>
                         <form action="# " class="contact-us contact_login-form">
@@ -206,7 +216,7 @@
                                 <textarea rows="3 " cols="25 " name="message " id="message " class="input-tx-area "></textarea>
                             </div>
                             <div class="message-submit-btn ">
-                                <input type="submit " value="send " class="btn btn-send " aria-label="send button">
+                                <input type="submit " value="send " class="btn-mine btn-send " aria-label="send button">
                             </div>
 
                         </form>
@@ -226,7 +236,7 @@
                             </div>
 
                             <div class="staff-login-btn ">
-                                <input type="submit " value="Login " class="btn btn-login " aria-label="submit button">
+                                <input type="submit " value="Login " class="btn-mine btn-login " aria-label="submit button">
                             </div>
                         </form>
 
@@ -237,7 +247,7 @@
                             <a href="# " aria-label="Call us now">
                                 <img id="flash-img-wide" width=280px, height=250px src="images/give-us-call-text-write-600w-226282423.webp " alt="call us now ">
                             </a>
-                            <a href="# " aria-label="call us now">
+                            <a href="#" aria-label="call us now">
                                 <img id="flash-img-narrow" width=200px, height=100px src="images/Call+us+now.png" alt=" call us now">
                             </a>
                         </div>
@@ -292,12 +302,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" aria-label="button">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" aria-label="button">
+                                    <span class="carousel-control-prev-icon slide-icon-mine" aria-hidden="true"></span>
                                     <button class="visually-hidden">Previous</button>span>
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="carousel-control-next-icon slide-icon-mine" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
         </button>
                         </div>
@@ -307,11 +317,11 @@
 
 
                 <!--  <div class="our-products ">
-                    <!--  <div class="service-description ">
+                      <div class="service-description ">
                             <P class="description-paragraph ">Our Site is a hub for innovation and inventors who want to excel in technology. We use.. <a href="# ">read further</a>
                                  proprietary AI to analyze the competition for your topic, and to help you create optimized systems for faster deployments. 
                             </P>
-                        </div> -->
+                        </div> 
                 <div class="service-description testimonial " data-testimonial="this ">
                     <P class="testimonial-paragarph tm-1 ">The staff and support are second to none. They are polished, proficient and accessible and patient </P><span>Christine Stones</span>
                     <P class="testimonial-paragarph tm-2 ">The staff and support are very approachable and are always available to answer your questions all the times</P><span>Jacob Obslow</span>

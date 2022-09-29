@@ -55,6 +55,7 @@ contactForm.addEventListener('click', (e) => {
         productSection.style.cssText = "display: flex";
         flashImgNarrow.style.cssText = "translate: 0";
         flashImgWide.style.cssText = "translate:-100%";
+        contactBtn.style.cssText = "opacity: 0";
 
 
 

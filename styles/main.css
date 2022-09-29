@@ -27,7 +27,9 @@ html {
     font-size: 16px;
 }
 
-* {
+*,
+::after,
+::before {
     box-sizing: border-box;
     font-size: 16px;
     margin: 0;
@@ -80,17 +82,37 @@ html {
     justify-content: space-around;
     background-color: #2c2a36;
     box-shadow: inset 15px 15px 40px #43424c;
-    height: 5rem;
+    height: 6rem;
     width: 100%;
     overflow: hidden;
     padding: 0 2rem;
+    place-items: center;
+}
+
+.logo-div {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.title-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: .890rem;
+}
+
+.nav-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .site-title {
-    align-self: center;
-    justify-self: center;
-    font-size: 2rem;
-    margin-left: 35%;
+    font-size: 1.5rem;
+    /* margin-top: .820rem;
+    margin-left: 20%; */
     color: #151320;
     transition: var(--transition-1);
     animation: siteHover 1s infinite;
@@ -102,19 +124,9 @@ html {
 
 .site-title.glow {
     filter: brightness(90);
-    scale: 1.5;
+    scale: 1.2;
     text-shadow: 0 0 10px #fff;
-    translate: 50%;
 }
-
-
-/*  @keyframes siteHover {
-            100% {
-                filter: brightness(90);
-                scale: 1.1;
-                text-shadow: 0 0 10px #fff;
-            }
-        } */
 
 .logo {
     display: flex;
@@ -125,49 +137,53 @@ html {
 
 .navigation {
     display: flex;
-    justify-content: flex-end;
-    width: 100%;
+    justify-content: space-evenly;
+    width: 30%;
+    padding: 0 5%;
+    max-width: 750px;
 }
 
 .navigation .nav-links {
     display: flex;
-    gap: 3rem;
-    align-items: center;
+    gap: 5rem;
+    justify-content: space-evenly;
 }
 
 .navigation .nav-links a {
+    display: inline-block;
     text-decoration: none;
 }
 
 .navigation .nav-links li {
-    padding: .580rem;
     list-style: none;
+    font-size: 3.5rem;
 }
 
-.navigation .nav-links i {
-    font-size: 1.890rem;
+.navigation .nav-links .icon-mine {
     border: 1px solid #2c2a36;
     border-radius: 50%;
-    padding: .350rem;
     transition: var(--transition-1);
     box-shadow: 2px 2px 2px #43424c, -2px -2px 2px #151320;
     color: #fff;
     width: 1.5em;
     height: 1.5em;
     display: flex;
-    justify-items: center;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
+    font-size: 4vh;
+    scale: 1.1;
 }
 
-.navigation .nav-links li:hover i {
+.navigation .nav-links li:hover .icon-mine {
     color: var(--clr);
-    font-size: 1.5rem;
-    background-image: radial-gradient(circle at 1px 4px, #131520 1px, #43424c 2px);
+    font-size: 4vh;
+    /*  background-image: radial-gradient(circle at 1px 4px, #131520 1px, #43424c 2px); */
     background-size: 5px 6px;
+    background-color: #131520;
 }
 
-.fa-whatsapp {
+.fa-whatsapp.icon-mine {
     color: var(--clr);
 }
 
@@ -262,6 +278,7 @@ html {
 .team-member:hover {
     background-color: transparent;
     border-radius: 1em;
+    z-index: 500;
 }
 
 .tm-1:hover .our-team-hd {
@@ -293,18 +310,18 @@ html {
     height: 100%;
 }
 
-.team-member h4 {
+.team-member .tm-name {
     margin-top: .3rem;
     color: #a3a3a3;
     transition: var(--transition-1);
 }
 
-.team-member:hover h4 {
-    transform: translateX(23%);
+.team-member:hover .tm-name {
+    transform: translateX(20%);
     color: #f1f1f1;
 }
 
-.team-member h4 span {
+.team-member .tm-role {
     color: #151320;
     display: block;
     transition: var(--transition-1);
@@ -312,7 +329,7 @@ html {
 
 .team-member .socials {
     background: linear-gradient(to right, rgb(67, 66, 76, .5), rgb(21, 19, 32) 70%);
-    height: 80%;
+    height: 70%;
     width: 3rem;
     position: absolute;
     right: -100%;
@@ -321,10 +338,7 @@ html {
     align-items: center;
     justify-content: center;
     z-index: 2;
-}
-
-.socials .socials-links li {
-    list-style-type: none;
+    padding-right: .5rem;
 }
 
 .socials .socials-links {
@@ -332,12 +346,32 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.25rem;
+    gap: .3rem;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
-.socials .socials-links i {
-    font-size: 1.5rem;
+.socials .socials-links li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    width: 100%;
+    height: calc(100%/4);
+    padding: 0 1rem;
+}
+
+.socials .socials-links .i-style-mine {
+    font-size: 3vh;
+    width: 100%;
+    padding: 0 1rem;
     color: var(--clr);
+    transition: var(--transition-1);
+}
+
+.socials .socials-links .i-style-mine:hover {
+    filter: brightness(30);
 }
 
 
@@ -498,7 +532,7 @@ html {
     position: relative;
     bottom: 0;
     left: 50%;
-    translate: -50%;
+    translate: -50% -10%;
     margin-inline-end: 2hv;
 }
 
@@ -513,7 +547,7 @@ html {
     background-color: #131520;
     height: 100%;
     position: absolute;
-    bottom: 0;
+    bottom: 5%;
     transition: var(--transition-1);
     color: #f1f1f1;
     place-items: center;
@@ -528,12 +562,22 @@ html {
     opacity: .5;
 }
 
+.carousel-indicators {
+    margin-top: 11rem;
+    translate: 0 50%;
+}
+
 .carousel-indicators button[aria-current=true] {
     background-color: #f06b0d;
 }
 
+#carouselExampleCaptions .slide-icon-mine {
+    translate: 0 -100%;
+}
+
 .carousel-item.img-mine.active.scale::after {
-    scale: 90% 70%;
+    scale: 90% 50%;
+    translate: 0 -5%;
 }
 
 
@@ -689,12 +733,19 @@ html {
     flex-direction: row;
     gap: .2rem;
     position: absolute;
-    top: 2%;
+    top: 0;
     place-items: center;
     align-self: center;
     width: 80%;
     padding: .870rem .650rem;
     margin-bottom: .550rem;
+}
+
+.form__selector__btns {
+    display: flex;
+    gap: .550rem;
+    position: absolute;
+    top: 0;
 }
 
 .btn-select-form {
@@ -721,12 +772,12 @@ html {
     transition: var(--transition-1);
 }
 
-.form-selector .btn:hover::after {
+.form-selector .btn-mine:hover::after {
     width: 100%;
     margin-right: auto;
 }
 
-.form-selector .btn:hover::before {
+.form-selector .btn-mine:hover::before {
     width: 100%;
     margin-left: auto;
 }
@@ -782,12 +833,17 @@ html {
     position: absolute;
     bottom: -2%;
     color: #f1f1f1;
-    /*  background-color: #131520; */
+    background-color: #131520;
     right: 2%;
     font-size: 1.2rem;
     cursor: pointer;
     visibility: hidden;
     transition: var(--transition-1);
+    border-radius: .8rem;
+}
+
+.close-form-text.form-close:hover {
+    filter: brightness(2);
 }
 
 .close-form-text .form-close {
