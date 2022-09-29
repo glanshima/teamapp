@@ -909,10 +909,10 @@ html {
 }
 
 .flash-hero {
-    width: 24.5vw;
-    /* height: 4.5rem; */
-    /* 4.5rem when contact opens 12rem when login opens*/
-    visibility: visible;
+    border: 1px solid red;
+    position: relative;
+    right: 0;
+    bottom: 0;
 }
 
 .flash-hero.login-clicked {
@@ -926,17 +926,15 @@ html {
 
 #flash-img-wide {
     translate: -100%;
-    position: absolute;
-    top: 0;
     width: 100%;
+    display: none;
 }
 
 #flash-img-narrow {
-    position: absolute;
-    top: -10%;
-    translate: 100%;
     width: 100%;
+    translate: -100%;
     transition: var(--transition-1);
+    display: none;
 }
 
 

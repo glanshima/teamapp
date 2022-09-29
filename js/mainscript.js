@@ -16,22 +16,7 @@ const flashImgWide = document.querySelector('#flash-img-wide');
 const flashImgNarrow = document.querySelector('#flash-img-narrow');
 const serviceDescription = document.querySelector('.service-description');
 const productSection = document.querySelector('.our-products');
-/* anime({
-    targets: 'div.center-box',
-    left: [{
-            value: 240,
-            duration: 3000
-        },
-        { value: 100, duration: 3000 }
-    ],
-    backgroundColor: '#FFF',
-    color: '#151320',
-    borderRadius: ['0%', '90%'],
-    easing: 'easeInOutSine',
-    loop: true,
 
-
-}) */
 
 
 function clickEvents(type, selector, callback) {
@@ -57,8 +42,6 @@ contactForm.addEventListener('click', (e) => {
         flashImgWide.style.cssText = "translate:-100%";
         contactBtn.style.cssText = "opacity: 0";
 
-
-
     } else if (e.target.matches('.login-select')) {
         contactForm.style.cssText = "height: 19rem";
         staffLogin.style.cssText = "right: 0";
@@ -83,38 +66,10 @@ contactForm.addEventListener('click', (e) => {
         flashHeroBox.classList.remove('login-clicked')
         serviceDescription.style.cssText = "display: flex";
         flashHeroBox.style.cssText = "visibility: hidden";
+        flashImgWide.style.cssText = "translate: -100%";
         productSection.style.cssText = "display: none";
-
-
-
     }
 })
-
-/* clickEvents('click', '.contact-select', (e) => {
-    contactForm.style.cssText = "height: 27rem";
-    contactUs.style.cssText = "right: 0";
-    staffLogin.style.cssText = "right: -100";
-    closeForm.style.cssText = "visibility: visible";
-    serviceContainer.style.cssText = "width: 100%";
-    serviceContainer.classList.add('opened-forms')
-
-})
-clickEvents('click', '.login-select', (e) => {
-    contactForm.style.cssText = "height: 19rem";
-    staffLogin.style.cssText = "right: 0";
-    contactUs.style.cssText = "right: -100";
-    closeForm.style.cssText = "visibility: visible";
-    serviceContainer.style.cssText = "width: 100%";
-    serviceContainer.classList.add('opened-forms')
-})
-clickEvents('click', '.close', (e) => {
-    contactForm.style.cssText = "height:3.5rem";
-    staffLogin.style.cssText = "right: -100";
-    contactUs.style.cssText = "right: -100";
-    closeForm.style.cssText = "visibility: hidden";
-    serviceContainer.style.cssText = "width: 50wv";
-    serviceContainer.classList.remove('opened-forms')
-}) */
 
 /* Hover Effect on Meet our Team Text */
 teamFrame.addEventListener('mouseover', () => {
