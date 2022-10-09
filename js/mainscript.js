@@ -1,6 +1,5 @@
 /* const anime = require('animejs'); */
-
-
+const header = document.querySelector('.header')
 const contactForm = document.querySelector('.contact-form-section');
 const contactUs = document.querySelector('.contact-form');
 const staffLogin = document.querySelector('.staff-login-form');
@@ -16,19 +15,44 @@ const flashImgWide = document.querySelector('#flash-img-wide');
 const flashImgNarrow = document.querySelector('#flash-img-narrow');
 const serviceDescription = document.querySelector('.service-description');
 const productSection = document.querySelector('.our-products');
-
+const slideCaption = document.querySelector('.slide-caption');
+const headerPos = header.getBoundingClientRect().top
+let windowHeight = window.innerHeight;
 
 
 function clickEvents(type, selector, callback) {
     document.addEventListener(type, (e) => {
-        if (e.target.matches(selector)) callback(e)
+        if (e.target.matches(selector)) callback(e);
     })
 }
+
+
+
+function setStickyHeader(e) {
+    let sticky = header.offsetTop;
+
+    if (window.pageYOffset > sticky) {
+
+        header.classList.add('sticky')
+    } else {
+        header.classList.remove('sticky')
+    }
+}
+/* 
+window.addEventListener('scroll', e => {
+
+    _.throttle(setStickyHeader(e), 100)
+
+}) */
+
+
+
+
 /* Contact Section Form Toggle Events */
 
 contactForm.addEventListener('click', (e) => {
     if (e.target.matches('.contact-select')) {
-        contactForm.style.cssText = "height: 26rem; padding-bottom: 1rem";
+        contactForm.style.cssText = "height: 28rem; padding-bottom: 1rem";
         contactUs.style.cssText = "right: 0";
         staffLogin.style.cssText = "right: -100";
         closeForm.style.cssText = "visibility: visible";
@@ -95,3 +119,63 @@ slidingImg.forEach(imgSlide => {
         imgSlide.classList.toggle("scale")
     }, 2500);
 })
+
+
+
+/* SLIDE FUNCTIONALITY */
+let slides = document.querySelectorAll('.carousel-slide');
+let dots = document.querySelectorAll('.dots');
+let currentSlide = 0;
+
+document.addEventListener('DOMContentLoaded', startSlide(currentSlide));
+const autoSlide = setInterval(() => {
+    nextSlide()
+}, 20000);
+
+clickEvents('click', '.slide-nav__btn-icon', (e) => {
+    if (e.target.matches('.btn-prev')) {
+        prevSlide(currentSlide)
+    } else if (e.target.matches('.btn-next')) {
+        nextSlide(currentSlide)
+    }
+})
+
+
+
+
+dots.forEach((dot, i) => {
+
+    dot.addEventListener('click', (e) => {
+        startSlide(i);
+        currentSlide = i;
+
+    });
+
+
+})
+
+
+
+
+
+function startSlide(n) {
+
+    slides.forEach(slide => {
+        slide.style.display = 'none'
+    });
+    dots.forEach(dot => {
+        dot.classList.remove('active');
+    });
+    slides[n].style.display = 'block';
+    dots[n].classList.add('active');
+}
+
+function nextSlide(n) {
+    currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++;
+    startSlide(currentSlide);
+}
+
+function prevSlide(n) {
+    currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--;
+    startSlide(currentSlide)
+}
