@@ -52,7 +52,7 @@ window.addEventListener('scroll', e => {
 
 /* Contact Section Form Toggle Events */
 
-contactForm.addEventListener('click', (e) => {
+/* contactForm.addEventListener('click', (e) => {
     if (e.target.matches('.contact-select')) {
         contactForm.style.cssText = "height: 28rem; padding-bottom: 1rem";
 
@@ -96,7 +96,7 @@ contactForm.addEventListener('click', (e) => {
         flashImgWide.style.cssText = "translate: -100%";
         productSection.style.cssText = "display: none";
     }
-})
+}) */
 
 
 /* Contact Section Form Toggle Events  end*/
