@@ -1,7 +1,8 @@
 /* const anime = require('animejs'); */
-const header = document.querySelector('.header')
-const contactForm = document.querySelector('.contact-form-section');
-const contactUs = document.querySelector('.contact-form');
+const header = document.querySelector('.header');
+const footer = document.querySelector('.footer');
+
+const contactForm = document.querySelector('.contact-form.mobile-view-contact-form');
 const staffLogin = document.querySelector('.staff-login-form');
 const contactBtn = document.querySelector('.contact-select');
 const staffLoginBtn = document.querySelector('.login-select');
@@ -51,52 +52,16 @@ window.addEventListener('scroll', e => {
 /* Sticky nav header end  */
 
 /* Contact Section Form Toggle Events */
+closeForm.addEventListener('click', () => {
+    contactForm.style.cssText = "translate: 200%; scale: .1;";
+})
 
-/* contactForm.addEventListener('click', (e) => {
-    if (e.target.matches('.contact-select')) {
-        contactForm.style.cssText = "height: 28rem; padding-bottom: 1rem";
-
-        contactUs.style.cssText = "right: 0";
-        staffLogin.style.cssText = "right: -100";
-        closeForm.style.cssText = "visibility: visible";
-        serviceContainer.style.cssText = "width: 50%; translate: -50%;";
-        serviceContainer.classList.add('opened-forms')
-        flashHeroBox.classList.remove('login-clicked')
-        flashHeroBox.style.cssText = "visibility: visible";
-        serviceDescription.style.cssText = "display: none";
-        productSection.style.cssText = "display: flex";
-        flashImgNarrow.style.cssText = "translate: 0";
-        flashImgWide.style.cssText = "translate:-100%";
-        contactBtn.style.cssText = "opacity: 0";
-
-    } else if (e.target.matches('.login-select')) {
-        contactForm.style.cssText = "height: 19rem";
-        staffLogin.style.cssText = "right: 0";
-        contactUs.style.cssText = "right: -100";
-        closeForm.style.cssText = "visibility: visible";
-        serviceContainer.style.cssText = "width: 50%; translate: -50%;";
-        serviceContainer.classList.add('opened-forms')
-        flashHeroBox.classList.add('login-clicked');
-        flashHeroBox.style.cssText = "height: 12rem; visibility: visible";
-        flashImgWide.style.cssText = "translate: 0";
-        flashImgNarrow.style.cssText = "translate: -100%";
-        serviceDescription.style.cssText = "display: none";
-        productSection.style.cssText = "display: flex";
-
-    } else if (e.target.matches('.form-close')) {
-        contactForm.style.cssText = "height:3.5rem";
-        staffLogin.style.cssText = "right: -100";
-        contactUs.style.cssText = "right: -100";
-        closeForm.style.cssText = "visibility: hidden";
-        serviceContainer.style.cssText = "width: 90%";
-        serviceContainer.classList.remove('opened-forms')
-        flashHeroBox.classList.remove('login-clicked')
-        serviceDescription.style.cssText = "display: flex";
-        flashHeroBox.style.cssText = "visibility: hidden";
-        flashImgWide.style.cssText = "translate: -100%";
-        productSection.style.cssText = "display: none";
+footer.addEventListener('click', (e) => {
+    if (e.target.matches('.contact-us-icon')) {
+        contactForm.classList.add('formOpened')
+        contactForm.style.cssText = "translate: 0; scale: 1";
     }
-}) */
+})
 
 
 /* Contact Section Form Toggle Events  end*/
@@ -227,6 +192,7 @@ clickEvents('click', '.team_btn', e => {
         currentNumberOutput.textContent = currentMemberNumber;
 
     }
+
 })
 
 function viewNextMember(n) {
@@ -287,3 +253,70 @@ function setLayout() {
         })
     }
 }
+
+
+/* testimonial slide functionality */
+let testimonialSlide = document.querySelectorAll('.testimonial-client.mobile-viewport');
+let currentTestimony = 0;
+window.addEventListener('DOMContentLoaded', setTestimony(currentTestimony))
+setInterval(() => {
+    nextTestimony(currentTestimony);
+    testimonyCount()
+}, 10000);
+
+
+
+function setTestimony(testimonySlide) {
+    testimonialSlide.forEach(testimonial => {
+        testimonial.style.display = 'none';
+    })
+    testimonialSlide[testimonySlide].style.display = 'block';
+
+}
+
+
+/* testimonial slide control functionality  */
+function nextTestimony() {
+    currentTestimony === testimonialSlide.length - 1 ? currentTestimony = 0 : currentTestimony++;
+    setTestimony(currentTestimony);
+}
+
+function prevTestimony() {
+    currentTestimony === 0 ? currentTestimony = testimonialSlide.length - 1 : currentTestimony--;
+    setTestimony(currentTestimony);
+}
+
+/* set counter text and functionality */
+let testimonyCounterOutput = document.querySelector('.current-count');
+let totalTestimonyOutput = document.querySelector('.total-testimonials');
+let currentTestimonyNumber = 1
+let totalTestimonies = testimonialSlide.length;
+
+testimonyCounterOutput.textContent = currentTestimonyNumber;
+totalTestimonyOutput.textContent = totalTestimonies;
+
+
+/* testimony slide control functions  */
+function testimonyCount() {
+    currentTestimonyNumber >= testimonialSlide.length ? currentTestimonyNumber = 1 :
+        currentTestimonyNumber++
+        testimonyCounterOutput.textContent = currentTestimonyNumber;
+}
+
+function testimonyCountPrev() {
+    currentTestimonyNumber <= 1 ? currentTestimonyNumber = testimonialSlide.length : currentTestimonyNumber--;
+
+    testimonyCounterOutput.textContent = currentTestimonyNumber;
+}
+
+/* click events for Testimony slide  */
+clickEvents('click', '.testimonial-control__btn', (e) => {
+    if (e.target.matches('.next-testimony')) {
+        nextTestimony(currentTestimony);
+        testimonyCount()
+    } else if (e.target.matches('.prev-testimony')) {
+        prevTestimony(currentTestimony);
+
+        testimonyCountPrev()
+    }
+})

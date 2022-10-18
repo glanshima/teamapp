@@ -35,21 +35,55 @@
                 <p class="site-title">OurCompany</p>
             </div>
             <div class="nav-box">
-                <nav class="navigation ">
+                <nav class="navigation main-nav mobile-nav">
                     <ul class="nav-links d-flex">
                         <li class="nav-links__item">
-                            <a href="https://api.whatsapp.com/send?phone=2348099798241" aria-label="Whatsapp icon" class="icon-link"><i class="fa-brands fa-whatsapp icon-mine" style="--clr:#00ff00; " id="wa-icon"></i></a></li>
+                            <a href="https://api.whatsapp.com/send?phone=2348099798241" aria-label="Whatsapp icon" class="icon-link"><i class="fa fa-house icon-mine" style="--clr:#00ff00; " id="wa-icon"></i></a></li>
                         <li class="nav-links__item">
-                            <a href="mailto:glanshima@gmail.com" aria-label="Envelop icon"><i class="fa fa-envelope icon-mine" style="--clr:#f06b0d;" id="ev-icon"></i></a></li>
+                            <a href="mailto:glanshima@gmail.com" aria-label="Envelop icon"><i class="fas fa-id-card icon-mine" style="--clr:#f06b0d;" id="ev-icon"></i></a></li>
                         <li class="nav-links__item">
-                            <a href="tel:2348099798241" aria-label="Phone Icon"><i class="fa fa-phone icon-mine" style="--clr:#001aff;" id="ph-icon"></a></i>
+                            <a href="tel:2348099798241" aria-label="Phone Icon"><i class="fas fa-cogs icon-mine" style="--clr:#001aff;" id="ph-icon"></a></i>
+                        </li>
+                        <li class="nav-links__item">
+                            <a href="#" aria-label="User Login Icon" title="Staff login"><i class="fa fa-user icon-mine" style="--clr:#131520;" id="ph-icon"></a></i>
                         </li>
                     </ul>
+                </nav>
+                <nav class="navigation main-nav nav-wide-screen">
+                    <ul class="nav-links-wide d-flex">
+                        <li class="nav-links__item">
+                            <a href="#" class="nav-link__link">Home</a>
+                        </li>
+                        <li class="nav-links__item">
+                            <a href="#" class="nav-link__link">About Us
+
+                            </a></li>
+                        <li class="nav-links__item">
+                            <a href="#" class="nav-link__link">Services</a></i>
+                        </li>
+                        <li class="nav-links__item user">
+                            <a href="#" class="nav-link__link" aria-label="User Login Icon">Staff <span class="user-icon"><i class="fa fa-user-circle icon-mine" style="--clr:#131520;" id="ph-icon"></i></span></a>
+
+                        </li>
+
+                    </ul>
+
+                    <ul class="user-auth-list">
+                        <li class="user-auth-list__item login"><a href="#" class="user-auth-list__link">Login</a>
+
+                        </li>
+                        <li class="user-auth-list__item register">
+                            <a href="#" class="user-auth-list__link">Register</a>
+
+                        </li>
+                    </ul>
+
+
                 </nav>
             </div>
         </div>
     </header>
-    <section class="hero container">
+    <section class="hero container ">
         <h1 class="hero__title">21st Century Workplace Solutions: <span class="hero__title-span--text hero__title">The Best IT Infrastructure Deployment, Training and e-solutions </span></h1>
         <div class="hero__content">
             <img src="/images/course1.jpg" alt="ou solution image">
@@ -59,18 +93,18 @@
             <a href="#" class="hero-content__btn btn">learn more</a>
         </div>
     </section>
-    <main class="main-content">
-        <section class="content">
+    <main class="main-content container ">
+        <section class="content ">
             <!--  <div class="center-box">Right Here</div> -->
 
-            <article class="team team-section container">
+            <article class="team team-section ">
                 <div class=" d-flex">
                     <h2 class="our-team-hd narrow-hd-our-team">Meet Our Team</h2>
                     <div class="team-member-btns">
                         <div class="prev-member team_btn">&#10094</div>
                         <div class="next-member team_btn">&#10095</div>
                     </div>
-                    <div class="members-count">
+                    <div class="members-count counter-style">
                         <h4 class="counter counter-text"><span class="current-number counter-text"></span><span>/</span><span class="total-members counter-text"></span></h4>
                     </div>
                     <div class="team-member tm-1 member-of-team">
@@ -199,7 +233,7 @@
 
                 </div>
             </article>
-            -
+
             <article class="team-wide-screen team-section container">
                 <div class="grid-container d-flex">
                     <h2 class="our-team-hd narrow-hd-our-team">Meet Our Team</h2>
@@ -336,7 +370,43 @@
 
                 </div>
             </article>
-            <article class="services container d-flex  ">
+            <aside class="aside d-flex">
+                <div class="aside-nav-wrapper aside-section d-flex">
+                    <div class="search-input-wrapper d-flex">
+                        <input type="text" aria-label="search site input field" class="search-box" placeholder="search...">
+                        <a href="#" class="search-link d-flex" aria-label="search icon"> <i class="fa fa-search search-btn "></i></a>
+                    </div>
+                    <nav class="aside-nav ">
+                        <ul class="aside-nav__list">
+                            <li class="aside-nav__list--item"><a href="#" class="aside-nav-link">Link Lorem ipsum</a></li>
+                            <li class="aside-nav__list--item"><a href="#" class="aside-nav-link">Link ipsum lorem</a></li>
+                            <li class="aside-nav__list--item"><a href="#" class="aside-nav-link">Lorem, ipsum dolor Link</a></li>
+                            <li class="aside-nav__list--item"><a href="#" class="aside-nav-link">Link ipsum dolor</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="aside-services-wrapper d-flex">
+                    <div class="products-description aside-section ">
+                        <h3 class="h3-hd">Get Quality</h3>
+                        <P class="products__paragraph  p-text">Our Company is a hub for innovation and inventors who want to excel in technology. <br>
+                            <a href="#" class="text-btn">Read further</a>
+                        </P>
+                    </div>
+                    <div class="products-description aside-section">
+                        <h3 class="h3-hd">Best Services</h3>
+                        <P class="products__paragraph  p-text">Our Company is a hub for innovation and inventors who want to excel in technology. <br> We use proprietary AI to analyze the competition for your topic.
+                            <a href="#" class="text-btn">Read further</a>
+                        </P>
+                    </div>
+                    <div class="products-description aside-section">
+                        <h3 class="h3-hd">Best Support</h3>
+                        <P class="products__paragraph  p-text">Our Company is a hub for innovation and inventors who want to excel in technology deployments.
+                            <a href="#" class="text-btn">Read further</a>
+                        </P>
+                    </div>
+                </div>
+            </aside>
+            <article class="services d-flex  ">
                 <div class="section-header ">
                     <div class="header-layer ">
                         <h3 class="h3-hd ">Our Products and Services</h3>
@@ -345,7 +415,7 @@
                 <div class="service-container">
                     <div class="about-us ">
 
-                        <div class="carousel-container ">
+                        <div class="carousel-container">
                             <div class="carousel-slide fade-in ">
                                 <img src="images/course4.jpg " alt="Course 1 " class="d-block w-100 ">
                                 <div class="slide-caption style-mine ">
@@ -402,38 +472,87 @@
                     </div>
 
                 </div>
-                <div class="our-products  ">
-                    <div class="products-description ">
+                <div class="our-products">
+                    <div class="products-description mobile-screen">
                         <P class="products__paragraph  p-text">Our Company is a hub for innovation and inventors who want to excel in technology. <br> We use proprietary AI to analyze the competition for your topic, and to help you create optimized systems for faster deployments.
                             <a href="#" class="text-btn">Read further</a>
                         </P>
                     </div>
-                    <div class="service-description testimonial " data-testimonial="this ">
+                    <div class="service-description testimonial  " data-testimonial="this">
                         <h2 class="testimonials-title">Testimonials</h2>
-                        <div class="testimonial-client">
+                        <div class="testimonial-wrapper d-flex">
+                            <div class="testimonials-container mobile d-flex">
+                                <div class="testimonial-client mobile-viewport">
 
-                            <div class="testimonial__text-container">
-                                <div class="testimonial-client__img"><img src="images/avatar4.jpg" alt=""></div>
-                                <P class="testimonial__paragraph tm-1 p-text ">The staff and support are second to none. They are polished, proficient and accessible and patient </P><span>Christine Stones</span>
-                            </div>
-                        </div>
-                        <div class="testimonial-client">
-
-                            <div class="testimonial__text-container">
-                                <div class="testimonial-client__img">
-                                    <img src="images/avatar3.jpg" alt="">
+                                    <div class="testimonial__text-container">
+                                        <div class="testimonial-client__img"><img src="images/avatar4.jpg" alt=""></div>
+                                        <P class="testimonial__paragraph tm-1 p-text ">The staff and support are second to none. They are polished, proficient and accessible and patient </P><span class="testimonial-client-name">Christine Stones</span>
+                                    </div>
                                 </div>
-                                <P class="testimonial__paragraph tm-2 p-text ">The staff and support are very approachable and are always available to answer your questions all the times</P><span>Jacob Obslow</span>
-                            </div>
-                        </div>
-                        <div class="testimonial-client">
+                                <div class="testimonial-client mobile-viewport">
 
-                            <div class="testimonial__text-container">
-                                <div class="testimonial-client__img">
-                                    <img src="images/avatar5.jpg" alt="">
+                                    <div class="testimonial__text-container">
+                                        <div class="testimonial-client__img">
+                                            <img src="images/avatar3.jpg" alt="">
+                                        </div>
+                                        <P class="testimonial__paragraph tm-2 p-text ">The staff and support are very approachable and are always available to answer your questions all the times</P><span class="testimonial-client-name">Jacob Obslow</span>
+                                    </div>
                                 </div>
-                                <P class="testimonial__paragraph tm-2 p-text">The staff and support are very approachable and are always available to answer your questions all the times</P><span>Joy Omah</span>
+                                <div class="testimonial-client mobile-viewport">
+
+                                    <div class="testimonial__text-container">
+                                        <div class="testimonial-client__img">
+                                            <img src="images/avatar5.jpg" alt="">
+                                        </div>
+                                        <P class="testimonial__paragraph tm-2 p-text">The staff and support are very approachable and are always available to answer your questions all the times</P><span class="testimonial-client-name">Joy Omah</span>
+                                    </div>
+                                </div>
                             </div>
+                            <div class="testimonials-container wide-screen-testimonial d-flex">
+                                <div class="testimonial-client wide-viewport">
+
+                                    <div class="testimonial__text-container">
+                                        <div class="testimonial-client__img"><img src="images/avatar4.jpg" alt=""></div>
+                                        <P class="testimonial__paragraph tm-1 p-text ">The staff and support are second to none. They are polished, proficient and accessible and patient </P><span class="testimonial-client-name">Christine Stones</span>
+                                    </div>
+                                </div>
+                                <div class="testimonial-client wide-viewport">
+
+                                    <div class="testimonial__text-container">
+                                        <div class="testimonial-client__img">
+                                            <img src="images/avatar3.jpg" alt="">
+                                        </div>
+                                        <P class="testimonial__paragraph tm-2 p-text ">The staff and support are very approachable and are always available to answer your questions all the times</P><span class="testimonial-client-name">Jacob Obslow</span>
+                                    </div>
+                                </div>
+                                <div class="testimonial-client wide-viewport">
+
+                                    <div class="testimonial__text-container">
+                                        <div class="testimonial-client__img">
+                                            <img src="images/avatar5.jpg" alt="">
+                                        </div>
+                                        <P class="testimonial__paragraph tm-2 p-text">The staff and support are very approachable and are always available to answer your questions all the times</P><span class="testimonial-client-name">Joy Omah</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-control-wrapper d-flex">
+                                <div class="testimonial-controls">
+                                    <div class="testimonial-control__btn prev-testimony">&#10094</div>
+                                    <div class="testimonial-control__btn next-testimony">&#10095</div>
+                                </div>
+                                <div class="testimonial-counter-wrapper counter-style">
+                                    <h4 class="testimonial-counter counter-text">
+                                        <span class="current-count counter-text">
+                                        </span>
+                                        <span class="count-divider counter-text">/
+                                        </span>
+                                        <span class="total-testimonials counter-text">
+                                        </span>
+                                    </h4>
+
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -441,19 +560,18 @@
             </article>
 
         </section>
-    </main>
-    <footer class="footer">
-        <div class="contact-form-section ">
+        <div class="contact-form-section mobile-viewport-contact-form ">
             <!--  <div class="form-selector">
                 <div class="form__selector__btns"> <button class="btn btn-select-form contact-select ">Contact Us</button>
                     <button class="btn btn-select-form login-select ">Staff Login</button>
                 </div>
             </div> -->
-            <div class="contact-form contact-section-forms  ">
+            <div class="contact-form contact-section-forms mobile-view-contact-form">
+                <p class="close-form-text form-close footer-small-p-text">Close <span class="form-close red-text-span">[x]</span></p>
                 <div class="form-hd ">
                     <h3>Contact Us</h3>
                 </div>
-                <form action="# " class="contact-us contact_login-form ">
+                <form action="#" class="contact-us contact_login-form ">
                     <div class="client-email-input input-box ">
                         <label for="email ">Email:</label>
                         <input type="email " name="email " id="email " placeholder="Email Address " class="input">
@@ -472,7 +590,8 @@
 
                 </form>
             </div>
-            <div class="staff-login-form contact-section-forms ">
+
+            <!--  <div class="staff-login-form contact-section-forms ">
                 <div class="form-hd ">
                     <h3>Staff Login</h3>
                 </div>
@@ -492,11 +611,65 @@
                 </form>
 
             </div>
-
-
+ -->
         </div>
-        <div class="copyright-text">
-            <p class="close-form-text form-close">All rights reserve <span class="form-close ">&copy; </span>SIDGAKS-Tech 2022</p>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <nav class="navigation secondary-nav" aria-label="secondary navigation footer">
+                <ul class="nav-links footer-nav d-flex">
+                    <li class="nav-links__item">
+                        <a href="https://api.whatsapp.com/send?phone=2348099798241" aria-label="Whatsapp icon" class="icon-link"><i class="fa-brands fa-whatsapp icon-mine" style="--clr:#00ff00; " id="wa-icon"></i></a>
+                    </li>
+                    <li class="nav-links__item">
+                        <a href="mailto:glanshima@gmail.com" aria-label="Envelop icon"><i class="fa-brands fa-twitter icon-mine" style="--clr:#f06b0d;" id="ev-icon"></i></a>
+                    </li>
+                    <li class="nav-links__item">
+                        <a href="tel:2348099798241" aria-label="Phone Icon"><i class="fa fa-phone icon-mine" style="--clr:#001aff;" id="ph-icon"></a></i>
+                    </li>
+                    <li class="nav-links__item ">
+                        <i class="fa fa-envelope icon-mine contact-us-icon" style="--clr:#131520;" id="ph-icon"></i>
+                    </li>
+                </ul>
+            </nav>
+            <div class="section-box-footer">
+                <div class="search-input-wrapper d-flex">
+                    <input type="text" aria-label="search site input field" class="search-box" placeholder="search...">
+                    <a href="#" class="search-link d-flex" aria-label="search icon"> <i class="fa fa-search search-btn "></i></a>
+                </div>
+            </div>
+            <div class="contact-form-section wide-viewport-footer ">
+
+                <div class="contact-form contact-section-forms">
+
+                    <div class="form-hd ">
+                        <h3>Contact Us</h3>
+                    </div>
+                    <form action="#" class="contact-us contact_login-form ">
+                        <div class="client-email-input input-box ">
+                            <label for="email ">Email:</label>
+                            <input type="email " name="email " id="email " placeholder="Email Address " class="input">
+                        </div>
+                        <div class="client-subject-input input-box ">
+                            <label for="subject ">Subject:</label>
+                            <input type="text " name="subject " id="subject " placeholder="Enter a subject " class="input ">
+                        </div>
+                        <div class="client-message-input input-box ">
+                            <label for="message ">Message:</label>
+                            <textarea rows="3 " cols="25 " name="message " id="message " class="input-tx-area "></textarea>
+                        </div>
+                        <div class="message-submit-btn form__btn-container">
+                            <input type="submit " value="send " class="btn btn-send " aria-label="send button ">
+                        </div>
+
+                    </form>
+                </div>
+
+
+            </div>
+            <div class="copyright-text">
+                <p class="copyright__p-text footer-small-p-text ">All rights reserve <span class=" copyright__p-text red-text-span">&copy; </span>SIDGAKS-Tech 2022</p>
+            </div>
         </div>
     </footer>
 
