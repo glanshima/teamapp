@@ -1,5 +1,5 @@
 /* const anime = require('animejs'); */
-const header = document.querySelector('.header');
+let header = document.querySelector('.header');
 const footer = document.querySelector('.footer');
 const contactForm = document.querySelector('.contact-form');
 const contactBtn = document.querySelector('.contact-select');
@@ -12,6 +12,8 @@ const slideCaption = document.querySelector('.slide-caption');
 const content = document.querySelector('.content');
 const formInput = document.querySelector('.input');
 const contentPos = content.getBoundingClientRect().top;
+const contactFormSection = document.querySelector('.contact-form-section');
+const mainContainer = document.querySelector('.main-container');
 let formOpenState = false;
 
 
@@ -24,7 +26,7 @@ function clickEvents(type, selector, callback) {
 
 
 /* Sticky nav header  */
-function setStickyHeader(e) {
+/* function setStickyHeader(e) {
     let ScrollPos = window.scrollY;
     if (ScrollPos > contentPos) {
 
@@ -33,13 +35,32 @@ function setStickyHeader(e) {
     } else {
         header.classList.remove('sticky')
     }
-}
+} */
+let body = document.querySelector('body')
 
-window.addEventListener('scroll', e => {
+function setStickyHeader() {
+
+    const observeScrollX = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                header.classList.add('sticky')
+            } else {
+                header.classList.remove('sticky')
+            }
+        })
+    })
+
+
+    observeScrollX.observe(content)
+}
+setStickyHeader()
+
+
+/* window.addEventListener('scroll', e => {
 
     _.throttle(setStickyHeader(e), 100)
 
-})
+}) */
 
 
 /* Sticky nav header end  */
@@ -47,20 +68,20 @@ window.addEventListener('scroll', e => {
 /* Contact Section Form Toggle Events */
 
 
-footer.addEventListener('click', (e) => {
-    if (e.target.matches('.contact-us-icon')) {
-        openForm()
+document.querySelector('.contact-us-icon').addEventListener('click', (e) => {
+      openForm()
 
-    } else if (e.target.matches('.form-close')) {
-        closeForm()
-    }
 })
-content.addEventListener('click', (e) => {
-    /*  let isClose = e.target.closest(contactForm);
-     if (!isClose && contactForm.classList.contains('formOpened')) {
-         closeForm();
-     } */
-    closeForm()
+document.querySelector('.form-close').addEventListener('click', (e) => {
+     closeForm()
+
+})
+  
+window.addEventListener('click', (e) => {
+    if (e.target === contactFormSection) {
+      contactFormSection.classList.remove('formOpened')
+      
+  } 
 })
 window.addEventListener('keydown', (e) => {
     if (e.key === "Escape") {
@@ -71,13 +92,13 @@ window.addEventListener('keydown', (e) => {
 
 function openForm() {
 
-    contactForm.classList.add('formOpened')
+    contactFormSection.classList.add('formOpened')
 
 }
 
 
 function closeForm() {
-    contactForm.classList.remove('formOpened')
+    contactFormSection.classList.remove('formOpened')
 
 }
 
