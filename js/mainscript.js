@@ -1,6 +1,7 @@
 /* const anime = require('animejs'); */
 let header = document.querySelector('.header');
 const footer = document.querySelector('.footer');
+const hero = document.querySelector('.hero')
 const contactForm = document.querySelector('.contact-form');
 const contactBtn = document.querySelector('.contact-select');
 const ourTeamText = document.querySelector('.our-team-hd wide-screen');
@@ -9,12 +10,14 @@ const teamFrame = document.querySelector('.team');
 const siteTitle = document.querySelector('.site-title');
 const serviceContainer = document.querySelector('service-container');
 const slideCaption = document.querySelector('.slide-caption');
-const content = document.querySelector('.content');
+const content = document.querySelector('.checkIntersection');
 const formInput = document.querySelector('.input');
 const contentPos = content.getBoundingClientRect().top;
 const contactFormSection = document.querySelector('.contact-form-section');
 const mainContainer = document.querySelector('.main-container');
 let formOpenState = false;
+
+
 
 
 
@@ -42,10 +45,12 @@ function setStickyHeader() {
 
     const observeScrollX = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
+            if (!entry.isIntersecting) {
                 header.classList.add('sticky')
+                
             } else {
                 header.classList.remove('sticky')
+                 
             }
         })
     })
@@ -427,3 +432,15 @@ clickEvents('click', '.testimonial-control__btn', (e) => {
         testimonyCountPrev()
     }
 })
+
+
+/* smooth scrolling  */
+
+/* const navigationMenu = document.querySelector('.navigation');
+
+const navHeight = navigationMenu.offsetHeight;
+document.documentElement.style.setProperty(
+    '--scrollPadding',
+    navigationMenu + 20 +'px'
+)
+console.log(navHeight) */
