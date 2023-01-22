@@ -158,16 +158,18 @@ body {
     padding: 1.5rem 0;
     background: #2c2a36;
     z-index: var(--level-5000-zIndex);
-    animation: slide-up 0.35s ease-out;
+    animation: slide-up 1s ease-out;
+        transition: opacity 1s ease-in-out;
     }
     
     @keyframes slide-up {
         from {
-            transform: translateY(100%);
+            opacity: .1;
         }
     
         to {
-            transform: translateY(0);
+            opacity: 1;
+                ;
         }
 }
 
@@ -196,8 +198,8 @@ body {
     position: sticky;
     top: 0;
     background: #2c2a36fc;
-        animation: slide-down 0.35s ease-in-out;
-        transition: all 0.4s ease-in-out;
+        animation: slide-down 1s ease-in-out;
+            transition: all 1s ease-in-out;
         -webkit-transition: all 0.4s ease-in-out;
 }
 
@@ -1280,6 +1282,7 @@ body {
 .btn-login {
     width: 100%;
     outline: none;
+
 }
 
 .form-hd.login {
